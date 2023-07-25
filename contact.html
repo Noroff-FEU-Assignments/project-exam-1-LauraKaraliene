@@ -25,7 +25,34 @@
         </section>
 
     </header>
-    <main></main>
+    <main>
+        <section class="form-upper-info">
+            <h1>GET IN TOUCH!</h1>
+            <p>Don’t hesitate to contact me via form bellow. Or send me e-mail: laura.stanislavaviciute@gmail.com</p>
+        </section>
+        <section>
+            <form class="contact-form">
+                <div>
+                    <p>Name</p>
+                    <input type="text" name="name" class="input" required>
+                </div>
+               <div>
+                     <p>E-mail</p>
+                <input type="email" name="message-email" class="input" required>
+               </div>
+               <div>
+                     <p>Subject</p>
+                <input type="text" name="subject" class="input" required>
+               </div>
+                    <p>Message</p>
+                    <textarea id="message" name="message" rows="7" cols="30" required></textarea>
+                </div>
+            </form>
+            <form action="submit.php" method="POST">
+                <input type="submit" value="SEND" class="cta_send">
+            </form>
+        </section>
+    </main>
     <footer>
         <p>Copyright &copy; Laura Karaliene</p>
         <p>2023</p>

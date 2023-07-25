@@ -2,18 +2,15 @@ body {
     background-image: url("../images/Path\ 23.png");
     background-size: cover;
     background-repeat: no-repeat; 
-    background-position-y: 50px;
+    background-position-y: 600px;
+    background-position-x: 0px;
+    background-size: contain;
 }
 
 .home-mountains {
     background-image: center;    
-    /* background-position-y: 35%; */
-    /* box-shadow: 10px 10px 10px  #a4a0a0; */
     height: 300px;
     min-width: 100%;
-    /* min-width: fit-content; */
-    /* object-fit: cover; */
-    /* max-width: auto; */
     margin: 0px;
     background-size: cover;
 }
@@ -46,10 +43,10 @@ h1 {
     margin: 10px;
 }
 
-.carousel-image-middle {
+/* .carousel-image-middle {
     width: 180px;
     height: 220px;
-}
+} */
 
 /* ol {
     align-items: center;
