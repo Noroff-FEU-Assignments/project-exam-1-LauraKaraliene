@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'poppinsregular';
+    src: url('poppins-regular-webfont.woff2') format('woff2'),
+         url('poppins-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@300&display=swap');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* h1 {
+    font-family: 'raleway', sans-serif;
+}  */
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 0px;
+    text-align: center;
+    /* height: 100vh; */
+    /* min-width: 100%; */
+}
+
+header {
+    width: 100%;
+}
+
+.header-upper {
+   background-color: #486581;
+   align-items: center;
+   margin: 0px;
+   padding: 0px;
+   text-align: center;
+}
+
+nav ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 15px 35px;
+    margin: 0px;
+    font-family: 'raleway', sans-serif;
+}
+
+nav a {
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.header-lower {
+    border-bottom: 1px solid #685240;
+   
+}
+
+.header-logo {
+    display: block;
+    margin: 20px auto;
+}
+
+
+main h1, p{
+    color: #486581;
+} 
+
+footer {
+    font-family: 'raleway' sans-serif;
+    background-color: #486581;
+    width: 100%;
+    bottom: 0px;
+    padding: 5px;
+    margin: 0px;
+}
+
+footer p {
+    color: white;
+    margin: 0px;
+    padding: 5px;
+}
+

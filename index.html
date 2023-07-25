@@ -10,25 +10,25 @@
 <body>
     <header>
         <section>
-            <nav class="">
+            <nav class="header-upper">
                 <ul>
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>     
         </section>
-        <section>
-            <div> <a href="index.html"><img src="../images/logo.png" alt="website logo" class=""/></a> 
+        <section class="header-lower">
+            <div class="header-logo"> <a href="index.html"><img src="../images/logo.png" alt="website logo"/></a> 
             </div> 
         </section>
 
     </header>
     <main>
-        <section class="home-mountains">
+        <section>
             <div>
-                <img src="../images/mountains.jpg" alt="mountains over Sunnmøre region in Norway" class=""/>
+                <img src="../images/mountains.jpg" alt="mountains over Sunnmøre region in Norway"  class="home-mountains"/>
             </div>
         </section>
         <section class="home-introduction">
@@ -37,10 +37,21 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolorum distinctio labore, tenetur, inventore?</p>
         </section>
         <section class="carousel">
-            <div></div>
+            <div class="">
+                <a href="#"><img src="../images/logo.png" alt="#"/></a>
+                <a href="#"><img src="../images/logo.png" alt="#" class="carousel-image-middle"/></a>
+                <a href="#"><img src="../images/logo.png" alt="#"/></a>
+            </div>
         </section>
-        <div class="carousel-indocators"></div>
-        <p>All posts >></p>
+        <div class="carousel-indicators">
+           <ol>
+             <li></li>
+             <li></li>
+             <li></li>
+           </ol>
+        </div>
+        <div class="all-posts"><a href="blog.html">All posts >></a></div>
+        
     </main>
     <footer>
         <p>Copyright &copy; Laura Karaliene</p>
