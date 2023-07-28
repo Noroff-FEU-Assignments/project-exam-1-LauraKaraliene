@@ -8,28 +8,14 @@
 } */
 
 
-@font-face {
-    font-family: 'poppinsregular';
-    src: url('poppins-regular-webfont.woff2') format('woff2'),
-         url('poppins-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'raleway';
-    src: url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@300&display=swap');
-    font-weight: normal;
-    font-style: normal;
-}
 
 body {
-    background-image: url("../images/Path\ 23.png");
-    background-size: cover;
+    background-image: url("../images/mountai-figure-smaller.png");
+    /* background-size: cover; */
     background-repeat: no-repeat; 
-    background-position-y: 300px;
-    background-position-x: 0px;
-    background-size: contain;
+   background-position: bottom;
+   background-size: contain;
 }
 
 main {
@@ -43,7 +29,7 @@ main {
 h1{
     font-weight: 200;
     font-family: 'raleway', sans-serif;
-    margin: 20px;
+    margin: 10px;
 }
 
 .form-upper-info {
@@ -71,7 +57,7 @@ h1{
 
 .input {
     border: #486581 solid 1px;
-    border-radius: 10px;
+    border-radius: 3px;
     width: 300px;
     height: 30px;
     padding: 5px 5px;
@@ -88,7 +74,7 @@ textarea {
 .cta_send {
     font-family: 'raleway', sans-serif;
     width: 150px;
-    margin: 40px auto 0px auto; 
+    margin: 30px auto 10px auto; 
     padding: 3px 0px;
     border: 2px solid #486581;
     border-radius: 5px;
