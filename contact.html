@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome Peaks | Contact</title>
+      <script
+      src="https://kit.fontawesome.com/00edcf15e0.js"
+      crossorigin="anonymous"
+    ></script>
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/contact.css" rel="stylesheet" />
 </head>
@@ -33,24 +37,29 @@
         <section>
             <form class="contact-form">
                 <div>
-                    <p>Name</p>
-                    <input type="text" name="name" class="input" required>
+                    <input type="text" name="name" class="input" id="name"  placeholder="Name"/> 
+                    <div class="form-error" id="nameError"> Name should be more than 5 characters long</div>
                 </div>
                <div>
-                     <p>E-mail</p>
-                <input type="email" name="message-email" class="input" required>
+                    <input type="email" name="message-email" class="input" id="email"  placeholder="E-mail"/>
+                    <div class="form-error" id="emailError"> Please enter a valid email address </div>
                </div>
                <div>
-                     <p>Subject</p>
-                <input type="text" name="subject" class="input" required>
+                    <input type="text" name="subject" class="input" id="subject"  placeholder="Subject"/>
+                    <div class="form-error" id="subjectError"> Subject should be more than 15 characters long</div>
                </div>
-                    <p>Message</p>
-                    <textarea id="message" name="message" rows="7" cols="30" required></textarea>
-                </div>
+               <div>
+                    <textarea id="message" name="message" rows="7" cols="30"  placeholder="Leave your message here"></textarea>
+                    <div class="form-error" id="messageError"> Message should be more than 25 characters long</div>
+               </div>
+               
+                <button value="Send" class="cta-send">SEND</button>
+                <div id="informationMessage"></div>
             </form>
-            <form action="submit.php" method="POST">
-                <input type="submit" value="SEND" class="cta_send">
-            </form>
+            <!-- <form action="submit.php" method="POST">
+                <input type="submit" value="SEND" class="cta_send" />
+            </form> -->
+           
         </section>
     </main>
     <footer>
@@ -58,6 +67,7 @@
         <p>2023</p>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
 </head>
 <body>
     
