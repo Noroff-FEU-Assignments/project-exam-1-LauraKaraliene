@@ -101,7 +101,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
 
-/**
- * remember change url:
- * define( 'HEADLESS_MODE_CLIENT_URL', 'https://hiroy.club' );
- */
+
+//  define( 'HEADLESS_MODE_CLIENT_URL', 'awesomepeaks.no' );
+ 

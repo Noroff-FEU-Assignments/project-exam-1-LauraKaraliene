@@ -58,7 +58,12 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    text-underline-offset: 2px;
+    text-underline-offset: 4px;
+}
+
+.current {
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .header-lower {
@@ -90,4 +95,31 @@ footer p {
     margin: 0px;
     padding: 5px;
 }
+
+.loading {
+    border: 15px solid var(--text-colour);
+    border-top: 15px solid var(--background-colour-cart);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: rotate 2s linear infinite;
+    margin: 100px auto;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .error {
+    color: var(--cta-add-to-cart-colour);
+    font-size: 1.3em;
+    border: 2px solid var(--cta-add-to-cart-colour);
+    border-radius: 20px;
+    padding: 0px 10px;
+  }
 
