@@ -1,8 +1,14 @@
 // const url = "https://awesomepeaks.no/wp-json/wp/v2/posts?&per_page=10";
-const url = "https://awesomepeaks.no/wp-json/wp/v2/posts";
-// const urlImage ="https://awesomepeaks.no/wp-json/wp/v2/media/";
+const url = "https://awesomepeaks.no/wp-json/wp/v2/posts?per_page=10";
+const urlImage ="https://awesomepeaks.no/wp-json/wp/v2/media/${postId}";
 const postList = document.querySelector(".post-list");
 const loading = document.querySelector(".loading");
+
+var page = 1;
+async function getMorePosts() {
+  page += 1;
+  createHTML();
+};
 
 
 async function getPosts(url) {
@@ -11,11 +17,11 @@ async function getPosts(url) {
     try {
       const response = await fetch(url);
       const results = await response.json();
-      console.log(results);
+      // console.log(results);
       
        createHTML(results);
     } catch (error) {
-      console.log(error);
+
        postList.innerHTML = `<div class="error"><p>Ups! An error occurred!</p></div>`;
      } finally {
       loading.classList.remove("loading");
@@ -23,8 +29,8 @@ async function getPosts(url) {
   }
 
   async function getImage(postId) {
-    const response = await fetch();
-    const images = await response.json('https://awesomepeaks.no/wp-json/wp/v2/media/${postId}');
+    const response = await fetch(urlImage);
+    const images = await response.json();
     console.log(images);
     
   };
@@ -41,7 +47,7 @@ async function getPosts(url) {
 
       postList.innerHTML += `<div>
                                  <a href="#?post=${post.id}">
-                                <img src="${imageUrl}"
+                                <img src="${urlImage}"
                                 alt="" class=""/>
                                  <h2>${post.title.rendered}</h2>
                                 </a>

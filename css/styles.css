@@ -97,8 +97,8 @@ footer p {
 }
 
 .loading {
-    border: 15px solid var(--text-colour);
-    border-top: 15px solid var(--background-colour-cart);
+    border: 15px solid red;
+    border-top: 15px solid blue;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -116,10 +116,9 @@ footer p {
   }
   
   .error {
-    color: var(--cta-add-to-cart-colour);
+    font-family: 'poppins', sans-serif;
+    color: red;
     font-size: 1.3em;
-    border: 2px solid var(--cta-add-to-cart-colour);
-    border-radius: 20px;
     padding: 0px 10px;
   }
 
