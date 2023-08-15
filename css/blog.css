@@ -1,0 +1,19 @@
+
+
+.load-more {
+    margin: 30px auto;
+    font-family: 'poppins', sans-serif;
+    border: none;
+    color: #486581;
+    text-decoration: none;
+}
+
+.load-more:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.load-more:active {
+    font-weight: 500;
+}
+

@@ -79,3 +79,7 @@ ol li {
     text-decoration: underline;
     text-underline-offset: 2px;
 }
+
+.all-posts:active {
+    font-weight: 500;
+}
