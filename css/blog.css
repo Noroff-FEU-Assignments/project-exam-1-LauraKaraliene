@@ -1,4 +1,9 @@
-
+body {
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh;
+    min-width: 100%; */
+}
 
 .load-more {
     margin: 30px auto;
@@ -15,5 +20,20 @@
 
 .load-more:active {
     font-weight: 500;
+}
+
+.blog-image {
+   object-fit: cover;
+    width: 300px;
+    height: 400px;
+}
+
+.blog-title {
+    font-family: 'raleway', sans-serif;
+    color: #486581;
+}
+
+.no-underline {
+    text-decoration: none;
 }
 

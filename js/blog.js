@@ -7,7 +7,7 @@ async function getMorePosts() {
 };
 
 
-const url = "https://awesomepeaks.no/wp-json/wp/v2/posts?&per_page=5";
+const url = `https://awesomepeaks.no/wp-json/wp/v2/posts?&per_page=10&page=${page}`;
 
 const postList = document.querySelector(".post-list");
 const loading = document.querySelector(".loading");
@@ -19,7 +19,8 @@ async function getPosts(url) {
      loading.classList.add("loading");
     postList.innerHTML = "";
     try {
-      const response = await fetch(url + `&page=${page}`);
+      const response = await fetch(url);
+      // const response = await fetch(url + `&page=${page}`);
       const results = await response.json();
       console.log(results);
       
@@ -33,38 +34,44 @@ async function getPosts(url) {
 
 
   //image call incorect???
-  async function getImage() {
-    const urlImage = `https://awesomepeaks.no/wp-json/wp/v2/media/${postId}`;
+  async function getImage(imageId) {
+    const urlImage = `https://awesomepeaks.no/wp-json/wp/v2/media/${imageId}`;
     const response = await fetch(urlImage);
     const images = await response.json();
-    console.log(images);
+    // console.log(images);
+    return images;
     
   };
   
   getPosts(url);
+
   
-  function createHTML(posts) {
-     posts.forEach(function (post) {
-      // const featuredMedia = await getImage (post.featured_media);
-      // if (featuredMedia) {
-      // const featuredImage = featuredMedia.source_url; 
+  async function createHTML(posts) {
+     posts.forEach(async function (post) {
+      console.log(post.featured_media);
+      
+      const featuredMedia = await getImage (post.featured_media);
+      console.log(featuredMedia);
+      
+      if (featuredMedia) {
+      const featuredImage = featuredMedia.source_url; 
 
       postList.innerHTML += `<div>
-                                 <a href="specific.html?post=${post.id}">
-                                <img src="${featuredImage}"
-                                alt="" class=""/>
-                                 <h2>${post.title.rendered}</h2>
-                                 <h3>${post.content.rendered}</h3>
-                                 <h3>${post.excerpt.rendered}</h3>
+                                 <a href="specific.html?post=${post.id}" class="no-underline">
+                                <img src="${featuredImage}" 
+                                alt="" class="blog-image"/>
+                                 <h1 class="blog-title">${post.title.rendered}</h1>
+                              
+                                
                                 </a>
                               </div>`;
-      // }
+      }
     });
   }
 
  
-
-
+  // <h3>${post.content.rendered}</h3>
+  // <h3>${post.excerpt.rendered}</h3>
 
 
 
