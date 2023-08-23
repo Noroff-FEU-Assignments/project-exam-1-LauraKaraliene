@@ -3,12 +3,12 @@ var page = 1;
 
 async function getMorePosts() {
   page += 1;
-  const newUrl = `https://awesomepeaks.no/wp-json/wp/v2/posts?&per_page=5&page=${page}`;
+  const newUrl = `https://awesomepeaks.no/wp-json/wp/v2/posts?orderby=date&order=desc&per_page=5&page=${page}`;
   await getPosts(newUrl);
 };
 
 
-const url = `https://awesomepeaks.no/wp-json/wp/v2/posts?&per_page=5&page=${page}`;
+const url = `https://awesomepeaks.no/wp-json/wp/v2/posts?orderby=date&order=desc&per_page=5&page=${page}`;
 const postList = document.querySelector(".post-list");
 const loading = document.querySelector(".loading");
 var totalLoadedPosts = 0;
@@ -17,7 +17,6 @@ var totalLoadedPosts = 0;
 
 async function getPosts(url) {
      loading.classList.add("loading");
-    // postList.innerHTML = "";
     try {
       const response = await fetch(url);
       const results = await response.json();
@@ -31,7 +30,6 @@ async function getPosts(url) {
         document.querySelector(".load-more").style.display = 'block';  
     }
   
-      
        createHTML(results);
     } catch (error) {
        postList.innerHTML = `<div class="error"><p>Ups! An error occurred!</p></div>`;
