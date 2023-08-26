@@ -5,6 +5,14 @@ body {
     min-width: 100%; */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.header-lower {
+    max-width: 1000px;
+}
+
 .load-more {
     margin: 30px auto;
     font-family: 'poppins', sans-serif;
@@ -31,9 +39,69 @@ body {
 .blog-title {
     font-family: 'raleway', sans-serif;
     color: #486581;
+    margin: 15px auto;
+    font-weight: bold;
+}
+
+h2 {
+    color: #486581;
+    margin: 5px auto;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+h3 {
+    color: #486581;
+    margin: 5px auto;
+    font-weight:lighter;
+    font-size: 1em;
 }
 
 .no-underline {
     text-decoration: none;
 }
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(4, 1fr); */
+    gap: 20px; 
+    max-width: 1000px;
+    justify-content: center;
+    margin: 40px auto 50px auto;
+}
+
+.post-list > div {
+    padding: 10px; 
+}
+
+.blog-image {
+    border: 1px solid #ccd4db;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 100px;
+    background-color: #685240;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 1000; 
+}
+
+.scroll-to-top:hover {
+    background-color: #486581;
+}
+
+
+
+
+
 

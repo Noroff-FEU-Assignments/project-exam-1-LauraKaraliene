@@ -23,44 +23,32 @@ document.addEventListener("DOMContentLoaded", function() {
      };
 
 
-      async function getImage(imageId) {
-    const urlImage = `https://awesomepeaks.no/wp-json/wp/v2/media/${imageId}`;
-    const response = await fetch(urlImage);
-    const image = await response.json();
-    return image.source_url;
+    async function getImage(imageId) {
+        const urlImage = `https://awesomepeaks.no/wp-json/wp/v2/media/${imageId}`;
+        const response = await fetch(urlImage);
+        const image = await response.json();
+        return image.source_url;
   }
 
 
 
-  async function displayPost(post) {
+    async function displayPost(post) {
+        let content = post.content.rendered;
+        const parser = new DOMParser();
+        const parsedContent = parser.parseFromString(post.content.rendered, 'text/html');
+        const title = post.title.rendered;
+        // const h2 = parsedContent.querySelector('h2') ? parsedContent.querySelector('h2').outerHTML : "";
+        // const h3 = parsedContent.querySelector('h3') ? parsedContent.querySelector('h3').outerHTML : "";
+        // const firstImage = parsedContent.querySelector('img') ? parsedContent.querySelector('img').outerHTML : "";
+        // const textContent = parsedContent.querySelector('p') ? parsedContent.querySelector('p').outerHTML : "";
 
-    let content = post.content.rendered;
-    const parser = new DOMParser();
-    const parsedContent = parser.parseFromString(post.content.rendered, 'text/html');
+        const featuredImageElement = document.querySelector(`img[src="${await getImage(post.featured_media)}"]`);
+        if (featuredImageElement) featuredImageElement.remove();
 
-    // Extracting elements from the parsed content
-    const title = post.title.rendered;
-    // const h2 = parsedContent.querySelector('h2') ? parsedContent.querySelector('h2').outerHTML : "";
-    // const h3 = parsedContent.querySelector('h3') ? parsedContent.querySelector('h3').outerHTML : "";
-    // const firstImage = parsedContent.querySelector('img') ? parsedContent.querySelector('img').outerHTML : "";
-    // const textContent = parsedContent.querySelector('p') ? parsedContent.querySelector('p').outerHTML : "";
-
-    const featuredImageElement = document.querySelector(`img[src="${await getImage(post.featured_media)}"]`);
-    if (featuredImageElement) featuredImageElement.remove();
-
-    // Remove the first image from parsed content so we can append the rest later
-    // if (firstImage) {
-    //     parsedContent.querySelector('img').remove();
-    // }
-
-    // Constructing the rest of the images (excluding the first one)
-    // const images = Array.from(parsedContent.querySelectorAll('img')).map(img => img.outerHTML).join('');
-
-    postPage.innerHTML = 
-                        `<div class="">
-                        <h1>${title}</h1>
-                        ${post.content.rendered}                  
-                        </div>`;
+        postPage.innerHTML = `<div class="">
+                            <h1>${title}</h1>
+                            ${post.content.rendered}                  
+                            </div>`;
   }
 
    
@@ -69,11 +57,6 @@ document.addEventListener("DOMContentLoaded", function() {
 {
 }
 
-//     <h1 class="post-title">${title}</h1>
-// ${h2}
-// ${h3} 
-                            // ${firstImage}
-                            // ${textContent}
-                            // ${images}
+
 
  

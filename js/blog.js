@@ -3,25 +3,27 @@ var page = 1;
 
 async function getMorePosts() {
   page += 1;
-  const newUrl = `https://awesomepeaks.no/wp-json/wp/v2/posts?orderby=date&order=desc&per_page=5&page=${page}`;
+  const newUrl = `https://awesomepeaks.no/wp-json/wp/v2/posts?orderby=date&order=desc&per_page=6&page=${page}`;
   await getPosts(newUrl);
 };
 
 
-const url = `https://awesomepeaks.no/wp-json/wp/v2/posts?orderby=date&order=desc&per_page=5&page=${page}`;
+const url = `https://awesomepeaks.no/wp-json/wp/v2/posts?orderby=date&order=desc&per_page=6&page=${page}`;
 const postList = document.querySelector(".post-list");
 const loading = document.querySelector(".loading");
+
+
 var totalLoadedPosts = 0;
 
 
 
 async function getPosts(url) {
      loading.classList.add("loading");
+
     try {
       const response = await fetch(url);
       const results = await response.json();
       console.log(results);
-
       totalLoadedPosts += results.length;
 
       if (totalLoadedPosts >= 17) {  
@@ -39,6 +41,7 @@ async function getPosts(url) {
   };
 
 
+
   //image call 
   async function getImage(imageId) {
     const urlImage = `https://awesomepeaks.no/wp-json/wp/v2/media/${imageId}`;
@@ -51,9 +54,7 @@ async function getPosts(url) {
   getPosts(url);
 
   
-
-
-
+//access h2, h3
   function extractContent(htmlString) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlString, 'text/html');
@@ -88,7 +89,24 @@ async function getPosts(url) {
 
   document.querySelector(".load-more").addEventListener("click", getMorePosts);
 
- 
+
+
+
+ //arrow-up button
+const scrollTopButton = document.getElementById("scrollTopButton");
+
+
+window.addEventListener("scroll", function() {
+    if (document.documentElement.scrollTop > 100) {
+        scrollTopButton.style.display = "block";  
+    } else {
+        scrollTopButton.style.display = "none";  
+    }
+});
+
+scrollTopButton.addEventListener("click", function() {
+  document.body.scrollIntoView({ behavior: 'smooth' });
+});
 
 
 
