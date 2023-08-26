@@ -37,6 +37,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const parser = new DOMParser();
         const parsedContent = parser.parseFromString(post.content.rendered, 'text/html');
         const title = post.title.rendered;
+
+        document.title = "Awesome Peaks | " + title;
+
         // const h2 = parsedContent.querySelector('h2') ? parsedContent.querySelector('h2').outerHTML : "";
         // const h3 = parsedContent.querySelector('h3') ? parsedContent.querySelector('h3').outerHTML : "";
         // const firstImage = parsedContent.querySelector('img') ? parsedContent.querySelector('img').outerHTML : "";
