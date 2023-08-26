@@ -31,34 +31,70 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 
-
     async function displayPost(post) {
         let content = post.content.rendered;
         const parser = new DOMParser();
-        const parsedContent = parser.parseFromString(post.content.rendered, 'text/html');
+        const parsedContent = parser.parseFromString(post.content.rendered, "text/html");
         const title = post.title.rendered;
-
         document.title = "Awesome Peaks | " + title;
 
-        // const h2 = parsedContent.querySelector('h2') ? parsedContent.querySelector('h2').outerHTML : "";
-        // const h3 = parsedContent.querySelector('h3') ? parsedContent.querySelector('h3').outerHTML : "";
-        // const firstImage = parsedContent.querySelector('img') ? parsedContent.querySelector('img').outerHTML : "";
-        // const textContent = parsedContent.querySelector('p') ? parsedContent.querySelector('p').outerHTML : "";
+
+        //access h2, h3
+        function extractContent(htmlString) {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(htmlString, "text/html");
+          const h2 = doc.querySelector("h2") ? doc.querySelector("h2").textContent : null;
+          const h3 = doc.querySelector("h3") ? doc.querySelector("h3").textContent : null;
+        
+          return { h2, h3 };
+        }
+      
+     
 
         const featuredImageElement = document.querySelector(`img[src="${await getImage(post.featured_media)}"]`);
         if (featuredImageElement) featuredImageElement.remove();
 
-        postPage.innerHTML = `<div class="">
+        postPage.innerHTML = `<div>
                             <h1>${title}</h1>
-                            ${post.content.rendered}                  
+                            <div class="content-centered">${post.content.rendered}</div>        
                             </div>`;
-  }
+           
+        //style elements                    
+        const h1Element = postPage.querySelector("h1");
+        if (h1Element) {
+        h1Element.style.textAlign = "center";
+        h1Element.style.fontSize = "1.8em";
+        }     
+            
+        const contentDiv = postPage.querySelector(".content-centered");
+        if (contentDiv) {
+          contentDiv.style.maxWidth = "600px";
+          contentDiv.style.margin = "0px auto";
+        }
 
-   
-    getPost();
+        const figureElements = postPage.querySelectorAll(".wp-block-image");
+        figureElements.forEach(figure => {
+            figure.style.display = "flex";
+            figure.style.textAlign = "center"; 
+            figure.style.margin = "50px auto"; 
+            figure.style.size = "medium";
+        });
+
+      //   figureElements.forEach(figure => {
+      //     const img = figure.querySelector('img');
+      //     if (img) {
+      //         img.style.display = "block";
+      //         img.style.margin = "0 auto";
+      //     }
+      // });
+  }
+getPost();
 });
 {
 }
+
+
+
 
 
 

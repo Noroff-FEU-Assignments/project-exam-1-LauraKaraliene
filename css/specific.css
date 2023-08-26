@@ -1,4 +1,32 @@
 
 .post-page {
     max-width: 800px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto 50px auto;
 }
+
+.content {
+    margin: 0 auto;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #486581;
+    margin: 7px auto;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.2em;
+    color: #486581;
+    margin: 7px auto 50px auto;
+}
+
+
+
+
+
