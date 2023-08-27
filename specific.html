@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Peaks | Document</title>
-    <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/specific.css" rel="stylesheet" />
-</head>
-<body>
-    <header>
-        <section>
-            <nav class="header-upper">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>     
-        </section>
-        <section class="header-lower">
-            <div class="line"></div>
-            <div class="header-logo"> <a href="index.html"><img src="../images/logo.png" alt="website logo"/></a> 
-            </div> 
-            <div class="line"></div>
-        </section>
-
-    </header>
-    <main>
-        <div class="loading"></div>
-        <section class="post-page"></section>
-    </main>
-    <footer style="font-family: 'raleway', sans-serif;">
-        <p>Copyright &copy; Laura Karaliene</p>
-        <p>2023</p>
-    </footer>
-    <script src="js/script.js"></script>
-    <script src="js/specific.js"></script>
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Awesome Peaks | Document</title>
+		<link href="css/styles.css" rel="stylesheet" />
+		<link href="css/specific.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<section>
+				<nav class="header-upper">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</section>
+			<section class="header-lower">
+				<div class="line"></div>
+				<div class="header-logo">
+					<a href="index.html"><img src="../images/logo.png" alt="website logo" /></a>
+				</div>
+				<div class="line"></div>
+			</section>
+		</header>
+		<main>
+            <button id="scrollTopButton" class="scroll-to-top">↑</button>
+			<div class="loading"></div>
+			<section class="post-page"></section>
+            <div class="modal" id="imageModal">
+                <div class="overlay"></div>
+                <div class="popup">
+                    <span class="close-btn">&times;</span>
+                    <img src="" id="modal-image" alt="Popup Image">
+                </div>
+            </div>
+		</main>
+		<footer style="font-family: 'raleway', sans-serif">
+			<p>Copyright &copy; Laura Karaliene</p>
+			<p>2023</p>
+		</footer>
+		<!-- <script src="js/script.js"></script> -->
+		<script src="js/specific.js" type="module"></script>
+	</body>
 </html>

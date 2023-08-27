@@ -1,8 +1,10 @@
 body {
-    display: flex;
-    flex-direction: column;
-    /* height: 100vh;
-    min-width: 100%; */
+    background-image: url("../images/Path\ 23.png");
+    background-repeat: no-repeat; 
+    background-size: contain;
+    background-position: bottom center;
+    min-height: 100vh;
+    position: relative;
 }
 
 html {
@@ -63,8 +65,7 @@ h3 {
 
 .post-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* grid-template-rows: repeat(4, 1fr); */
+    grid-template-columns: 1fr;
     gap: 20px; 
     max-width: 1000px;
     justify-content: center;
@@ -98,6 +99,19 @@ h3 {
 
 .scroll-to-top:hover {
     background-color: #486581;
+}
+
+
+@media screen and (min-width: 600px) {
+    .post-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .post-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 

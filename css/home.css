@@ -1,10 +1,11 @@
 body {
+    /* position: relative;
+    overflow-x: hidden; */
     background-image: url("../images/Path\ 23.png");
-    /* background-size: cover; */
     background-repeat: no-repeat; 
-    background-position-y: 600px;
-    background-position-x: 0px;
     background-size: contain;
+    background-position-y: bottom;
+    background-position-y: 600px;
 }
 
 .home-mountains {
@@ -22,7 +23,7 @@ h1 {
 }
 
 .home-introduction {
-    max-width: 800px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;

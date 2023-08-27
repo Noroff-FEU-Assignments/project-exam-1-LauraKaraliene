@@ -1,24 +1,18 @@
-/* body {
-    height: 100vh;
-} */
-
-/* body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-} */
-
-
-
 
 body {
-    background-image: url("../images/mountai-figure-smaller.png");
-    /* background-size: cover; */
-    background-repeat: no-repeat; 
-   background-position: bottom;
-   background-size: contain;
+    position: relative;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   /* justify-content: space-between;  */
+   background-repeat: no-repeat; 
+   /* background-position: bottom; */
+   /* background-size: contain; */
+   overflow-x: hidden;
 }
 
 main {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,6 +31,7 @@ h1{
     font-weight: 200;
     font-size: 15px;
     margin: 15px 0px;
+   
 }
 
 .contact-form {
@@ -77,6 +72,7 @@ textarea {
     border: 2px solid #486581;
     border-radius: 5px;
     color: #486581;
+    background-color: white;
     font-weight: bolder;
 }
 
@@ -102,6 +98,12 @@ textarea {
     margin: 0px 5px;
     font-weight: bold;
   }
+
+
+
+
+
+
 
 /* footer {
     bottom: 0px;
