@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome Peaks | Home </title>
+   
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/home.css" rel="stylesheet" />
 </head>
@@ -28,7 +29,6 @@
 
     </header>
     <main>
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F0F0F0" fill-opacity="1" d="M0,224L24,186.7C48,149,96,75,144,37.3C192,0,240,0,288,10.7C336,21,384,43,432,74.7C480,107,528,149,576,160C624,171,672,149,720,165.3C768,181,816,235,864,266.7C912,299,960,309,1008,298.7C1056,288,1104,256,1152,202.7C1200,149,1248,75,1296,74.7C1344,75,1392,149,1416,186.7L1440,224L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg> -->
         <section>
             <div>
                 <img src="../images/mountains.jpg" alt="mountains over Sunnmøre region in Norway"  class="home-mountains"/>
@@ -39,12 +39,13 @@
             <p>Hey there, fellow wanderers! Let us whisk you away on our treks across Norway's mesmerizing terrains. Here every trail tells a tale! With every step, laugh, and tail wag, we're crafting memories and inviting you to be part of our scenic saga.</p>
             <p>From mystical trails to exhilarating climbs, we are celebrating a love story with the great Norwegian outdoors. So, tie up those hiking boots, and let's discover the magic of Norway together!</p>
         </section>
+        <div class="loading"></div>
         <section class="carousel">
-            <div class="">
-                <a href="#"><img src="../images/logo.png" alt="#"/></a>
-                <a href="#"><img src="../images/logo.png" alt="#" class="carousel-image-middle"/></a>
-                <a href="#"><img src="../images/logo.png" alt="#"/></a>
-            </div>
+                <button id="prevBtn" class="control prev">&#10094;</button>                
+                <div class="carousel-cards">            
+                <!-- Cards will be added here -->
+                </div>
+                <button id="nextBtn" class="control next">&#10095;</button>
         </section>
         <div class="carousel-indicators">
            <ol>
@@ -60,6 +61,7 @@
         <p>Copyright &copy; Laura Karaliene</p>
         <p>2023</p>
     </footer>
+    <script src="js/home.js" type="module"></script>
     <script src="js/script.js" type="module"></script>
 </body>
 </html>

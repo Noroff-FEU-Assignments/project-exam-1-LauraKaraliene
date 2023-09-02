@@ -1,19 +1,17 @@
 body {
-    /* position: relative;
-    overflow-x: hidden; */
     background-image: url("../images/Path\ 23.png");
     background-repeat: no-repeat; 
     background-size: contain;
     background-position-y: bottom;
-    background-position-y: 600px;
 }
 
 .home-mountains {
-    background-image: center;    
+    background-position: center;
     height: 300px;
     min-width: 100%;
     margin: 0px;
     background-size: cover;
+    overflow: hidden;
 }
 
 h1 {
@@ -23,6 +21,7 @@ h1 {
 }
 
 .home-introduction {
+    text-align: left;
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -31,29 +30,113 @@ h1 {
     font-family: 'poppins', sans-serif;
 }
 
-.carousel-indocators {
-    align-items: center;
-    margin: 30px auto;
-}
-
-.carousel img {
-    width: 150px;
-    height: 170px;
+.carousel-image {
+    width: 200px;
+    height: 250px;
     border: 1px solid grey;
     border-radius: 5px;
-    margin: 10px;
+    margin: 5px;
+    overflow: hidden;
+} 
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+} 
+
+.carousel {
+    width: 100%;
+    position: relative;
+    max-width: 800px;
+    max-height: 600px;
+    height: 100%;
+    /* transform-style: preserve-3d; */
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin: 60px auto 20px auto;
 }
 
-/* .carousel-image-middle {
-    width: 180px;
-    height: 220px;
-} */
-
-/* ol {
+.carousel-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-} */
+    flex-wrap: nowrap;
+    margin: 0 auto;
+}
 
-ol li {
+.carousel-card {
+    margin: 0 10px;
+}
+
+.carousel-cards .carousel-card:nth-child(2) .carousel-image{
+    width: 250px;
+    height: 350px;
+}
+    
+
+
+.carousel h1 {
+    font-family: 'raleway', sans-serif;
+    color: #486581;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 7px auto 0px auto;
+}
+
+.carousel h2 {
+    font-family: 'raleway', sans-serif;
+    color: #486581;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 5px auto;
+}
+
+.carousel h3 {
+    font-family: 'raleway', sans-serif;
+    color: #486581;
+    font-size: 0.8rem;
+    margin: 3px auto;
+    font-weight: 600;
+}
+
+.control.prev, .control.next {
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);   
+    z-index: 10;
+    border: 0;
+    color: #685240;
+    font-size: 1.9rem;
+}
+
+.control.prev {
+    left: 0px;
+}
+
+.control.next {
+    right: 0px;
+}
+
+.control.disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+
+.carousel-indicators {
+    color: #685240;
+    align-items: center;
+    margin: 20px auto 30px auto;
+}
+
+.carousel-indicators li {
     position: relative;
     right: 25px;
     list-style: none;
@@ -61,12 +144,16 @@ ol li {
     align-items: center;
     width: 15px;
     height: 15px;
-    border: 2px solid grey;
+    border: 2px solid #685240;;
     border-radius: 50%;
 }
 
+.carousel-indicators li.active {
+    background-color: #685240;
+}
+
 .all-posts {
-    margin: 40px auto;
+    margin: 50px auto;
     max-width: 100px;
 }
 
@@ -83,4 +170,4 @@ ol li {
 
 .all-posts:active {
     font-weight: 500;
-}
+} 

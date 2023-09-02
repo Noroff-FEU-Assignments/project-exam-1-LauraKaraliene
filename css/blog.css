@@ -43,25 +43,26 @@ html {
     color: #486581;
     margin: 15px auto;
     font-weight: bold;
+    font-size: 1.4rem;
 }
 
 h2 {
+    font-family: 'raleway', sans-serif;
     color: #486581;
     margin: 5px auto;
-    font-weight: 600;
-    font-size: 1.3em;
+    font-weight: 500;
+    font-size: 1.2em;
 }
 
 h3 {
+    font-family: 'raleway', sans-serif;
     color: #486581;
     margin: 5px auto;
     font-weight:lighter;
     font-size: 1em;
 }
 
-.no-underline {
-    text-decoration: none;
-}
+
 
 .post-list {
     display: grid;
@@ -83,23 +84,6 @@ h3 {
 }
 
 
-.scroll-to-top {
-    display: none;
-    position: fixed;
-    bottom: 70px;
-    right: 100px;
-    background-color: #685240;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    z-index: 1000; 
-}
-
-.scroll-to-top:hover {
-    background-color: #486581;
-}
 
 
 @media screen and (min-width: 600px) {

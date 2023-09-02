@@ -24,6 +24,7 @@ body {
     margin: 0px;
     text-align: center;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 header {
@@ -105,6 +106,10 @@ svg {
    z-index: -100;
 }
 
+.no-underline {
+    text-decoration: none;
+}
+
 footer {
     position: sticky;
     top: 100vh;
@@ -124,6 +129,7 @@ footer p {
 }
 
 .loading {
+    display: none;
     border: 8px solid #685240;
     border-top: 8px solid #448ed4;
     border-radius: 50%;
@@ -132,6 +138,10 @@ footer p {
     animation: rotate 2s linear infinite;
     margin: 100px auto;
   }
+
+div.loading {
+    display: block;
+}
 
 
 .scroll-to-top {
