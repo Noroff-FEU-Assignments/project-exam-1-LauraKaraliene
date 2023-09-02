@@ -11,15 +11,13 @@ export function displayCarousel(posts, parent) {
        
 		if (featuredImage) {
 			carouselCards.innerHTML += `<div class="carousel-card"> 
-           
-									<a href="specific.html?post=${post.id}" class="no-underline">
-									<img src="${featuredImage.src}" alt="${featuredImage.alt}" class="carousel-image">
-									<h1 class="carousel-title">${post.title.rendered}</h1>
-									<h2>${extractedData.h2}</h2>
-									<h3>${extractedData.h3}</h3>
-									</a>
-                            
-                                </div>`;
+									    <a href="specific.html?post=${post.id}" class="no-underline">
+									    <img src="${featuredImage.src}" alt="${featuredImage.alt}" class="carousel-image">
+									    <h1 class="carousel-title">${post.title.rendered}</h1>
+									    <h2>${extractedData.h2}</h2>
+									    <h3>${extractedData.h3}</h3>
+									    </a>
+                                        </div>`;
 		}
 	}
 }

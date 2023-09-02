@@ -37,14 +37,16 @@ h1 {
     border-radius: 5px;
     margin: 5px;
     overflow: hidden;
+    object-fit: cover;
 } 
 
-.carousel-images img {
+/* .carousel-images img {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.3s;
-} 
+    /* transition: transform 0.3s; */
+    /* object-fit: cover; */
+ /* }   */
 
 .carousel {
     width: 100%;
@@ -52,7 +54,6 @@ h1 {
     max-width: 800px;
     max-height: 600px;
     height: 100%;
-    /* transform-style: preserve-3d; */
     display: flex;
     justify-content: center;
     flex-direction: row;
