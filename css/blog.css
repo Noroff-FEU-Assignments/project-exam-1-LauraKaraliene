@@ -15,6 +15,32 @@ html {
     max-width: 1000px;
 }
 
+.search {
+   margin: 20px auto;
+}
+
+#search-input {
+    color: #486581;
+    border: 1px solid #486581;
+    border-radius: 3px;
+    padding: 3px;
+    font-family: 'raleway', sans-serif;
+}
+
+#search-input:focus {
+    outline: none;
+}
+
+.search-button {
+    font-family: 'raleway', sans-serif;
+    color: #486581;
+    width: 70px;
+    padding: 3px;
+    border: 1px solid #486581;
+    border-radius: 3px;
+    background-color: white;
+}
+
 .load-more {
     margin: 30px auto;
     font-family: 'poppins', sans-serif;

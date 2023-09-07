@@ -1,5 +1,7 @@
 
 // import { fetchAndUpdateCarousel } from "./components/fetchCarousel.js";
+import { updateButtonStates } from "./helpers/updateButtonStates.js";
+import { setActiveIndicator } from "./components/setActiveIndicator.js";
 import { displayCarousel } from "./components/displayCarousel.js";
 import { baseUrl } from "./constants/api.js";
 
@@ -36,7 +38,7 @@ prevBtn.addEventListener('click', function() {
 function fetchAndUpdateCarousel() {
     const updatedUrl = `${baseUrl}posts?_embed=true&orderby=date&order=desc&per_page=3&page=${page}`;
     getCarousel(updatedUrl);
-    setActiveIndicator();
+    setActiveIndicator(page);
     updateButtonStates(); 
 }
 
@@ -62,30 +64,30 @@ async function getCarousel(url) {
 
 
 
-function setActiveIndicator() {
-    const indicators = document.querySelectorAll('.carousel-indicators li');
-    indicators.forEach((indicator, index) => {
-        if ((index + 1) === page) {
-            indicator.classList.add('active');
-        } else {
-            indicator.classList.remove('active');
-        }
-    });
-}
+// function setActiveIndicator() {
+//     const indicators = document.querySelectorAll('.carousel-indicators li');
+//     indicators.forEach((indicator, index) => {
+//         if ((index + 1) === page) {
+//             indicator.classList.add('active');
+//         } else {
+//             indicator.classList.remove('active');
+//         }
+//     });
+// }
 
 
-function updateButtonStates() {
-    if (page <= 1) {
-        prevBtn.classList.add("disabled");
-    } else {
-        prevBtn.classList.remove("disabled");
-    }
-    if (page >= maxPages || totalLoadedPosts >= 9) {
-        nextBtn.classList.add("disabled");
-    } else {
-        nextBtn.classList.remove("disabled");
-    }
-}
+// function updateButtonStates() {
+//     if (page <= 1) {
+//         prevBtn.classList.add("disabled");
+//     } else {
+//         prevBtn.classList.remove("disabled");
+//     }
+//     if (page >= maxPages || totalLoadedPosts >= 9) {
+//         nextBtn.classList.add("disabled");
+//     } else {
+//         nextBtn.classList.remove("disabled");
+//     }
+// }
 
 
 fetchAndUpdateCarousel();

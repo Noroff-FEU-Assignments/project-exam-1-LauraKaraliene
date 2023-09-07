@@ -130,8 +130,8 @@ footer p {
 
 .loading {
     display: none;
-    border: 8px solid #685240;
-    border-top: 8px solid #448ed4;
+    border: 6px solid #685240;
+    border-top: 6px solid #448ed4;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -142,6 +142,7 @@ footer p {
 div.loading {
     display: block;
 }
+
 
 
 .scroll-to-top {

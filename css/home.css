@@ -59,7 +59,20 @@ h1 {
     flex-direction: row;
     align-items: center;
     margin: 60px auto 20px auto;
+    /* transition: margin 0.3s ease; */
 }
+
+.loading {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); 
+    z-index: 10;
+}
+
 
 .carousel-cards {
     display: flex;
