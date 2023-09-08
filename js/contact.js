@@ -9,6 +9,9 @@ const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
 const messageSubmit = document.querySelector("#informationMessage");
 
+
+
+
 function validateForm() {
   event.preventDefault();
 
@@ -17,21 +20,25 @@ function validateForm() {
   } else {
     nameError.style.display = "block";
   }
+
   if (validateEmail(email.value)) {
     emailError.style.display = "none";
   } else {
     emailError.style.display = "block";
   }
+
   if (checkLength(subject.value, 14)) {
     subjectError.style.display = "none";
   } else {
     subjectError.style.display = "block";
   }
+
   if (checkLength(message.value, 24)) {
     messageError.style.display = "none";
   } else {
     messageError.style.display = "block";
   }
+
   if (customersName.value < 5 || !validateEmail || subject.value < 15 || message.value < 25) {
     return;
     messageSubmit.innerHTML = "";

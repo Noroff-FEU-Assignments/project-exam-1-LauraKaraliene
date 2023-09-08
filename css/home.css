@@ -137,12 +137,17 @@ h1 {
 .control.next {
     right: 0px;
 }
+/* 
+.prev.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+} */
 
-.control.disabled {
-    opacity: 0.3;
+/* button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
     cursor: default;
-}
-
+} */
 
 .carousel-indicators {
     color: #685240;

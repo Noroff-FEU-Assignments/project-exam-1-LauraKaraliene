@@ -23,7 +23,7 @@ main {
 h1{
     font-weight: 200;
     font-family: 'raleway', sans-serif;
-    margin: 10px;
+    margin: 20px auto;
 }
 
 .form-upper-info {
@@ -31,7 +31,11 @@ h1{
     font-weight: 200;
     font-size: 15px;
     margin: 15px 0px;
-   
+}
+
+i {
+    font-size: 25px;
+    margin: 15px 3px;
 }
 
 .contact-form {
@@ -44,6 +48,7 @@ h1{
 :placeholder-shown {
     font-family: 'poppins', sans-serif;
     font-size: 12px;
+    opacity: 0.7;
 }
 
 .input {
@@ -69,11 +74,22 @@ textarea {
     width: 150px;
     margin: 30px auto 10px auto; 
     padding: 3px 0px;
-    border: 2px solid #486581;
+    border: 1px solid #486581;
     border-radius: 5px;
     color: #486581;
     background-color: white;
-    font-weight: bolder;
+    cursor: pointer;
+    box-sizing: border-box; 
+    font-weight: bold;
+}
+
+
+button.cta-send:active {
+    font-weight: bold;
+    border: 2px solid #486581;
+    box-sizing: border-box; 
+    padding-top: 2px;  
+    padding-bottom: 2px;
 }
 
 .form-error {
@@ -98,13 +114,3 @@ textarea {
     margin: 0px 5px;
     font-weight: bold;
   }
-
-
-
-
-
-
-
-/* footer {
-    bottom: 0px;
-} */

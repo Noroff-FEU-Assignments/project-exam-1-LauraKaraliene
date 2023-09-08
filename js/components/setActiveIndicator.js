@@ -1,3 +1,5 @@
+
+
 export function setActiveIndicator(page) {
     console.log("Setting active indicator for page:", page);
     const indicators = document.querySelectorAll('.carousel-indicators li');
@@ -9,4 +11,6 @@ export function setActiveIndicator(page) {
             indicator.classList.remove('active');
         }
     });
+   
 }
+

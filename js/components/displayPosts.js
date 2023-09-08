@@ -4,9 +4,9 @@ import getFeaturedImage from "../helpers/getFeaturedImage.js";
 
 export default function displayPosts(posts, parent) {
 	for (const post of posts) {
-		console.log(post);
+		// console.log(post);
 
-		const contentHtml = post.content.rendered;
+		const contentHtml = post.content?.rendered;
 		const extractedData = extractContent(contentHtml);
 		const featuredImage = getFeaturedImage(post);
 

@@ -1,5 +1,5 @@
 
-// import { fetchAndUpdateCarousel } from "./components/fetchCarousel.js";
+
 import { updateButtonStates } from "./helpers/updateButtonStates.js";
 import { setActiveIndicator } from "./components/setActiveIndicator.js";
 import { displayCarousel } from "./components/displayCarousel.js";
@@ -14,11 +14,9 @@ const prevBtn = document.getElementById('prevBtn');
 const url = `${baseUrl}posts?_embed=true&orderby=date&order=desc&per_page=3&page=${page}`;
 const carousel = document.querySelector(".carousel");
 const loading = document.querySelector(".loading");
-// const control = carousel.querySelectorAll(".control");
 
 
-
-
+//buttons
 nextBtn.addEventListener('click', function() {
     if (page < maxPages) {  
         page++;
@@ -33,6 +31,8 @@ prevBtn.addEventListener('click', function() {
         fetchAndUpdateCarousel();
     }
 });
+
+
 
 
 function fetchAndUpdateCarousel() {
@@ -61,33 +61,6 @@ async function getCarousel(url) {
 		loading.classList.remove("loading");
 	}
 }
-
-
-
-// function setActiveIndicator() {
-//     const indicators = document.querySelectorAll('.carousel-indicators li');
-//     indicators.forEach((indicator, index) => {
-//         if ((index + 1) === page) {
-//             indicator.classList.add('active');
-//         } else {
-//             indicator.classList.remove('active');
-//         }
-//     });
-// }
-
-
-// function updateButtonStates() {
-//     if (page <= 1) {
-//         prevBtn.classList.add("disabled");
-//     } else {
-//         prevBtn.classList.remove("disabled");
-//     }
-//     if (page >= maxPages || totalLoadedPosts >= 9) {
-//         nextBtn.classList.add("disabled");
-//     } else {
-//         nextBtn.classList.remove("disabled");
-//     }
-// }
 
 
 fetchAndUpdateCarousel();

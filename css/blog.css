@@ -20,18 +20,54 @@ html {
 }
 
 #search-input {
+    position: relative;
     color: #486581;
+    width: 300px;
+    background-color: white;
     border: 1px solid #486581;
-    border-radius: 3px;
-    padding: 3px;
-    font-family: 'raleway', sans-serif;
+    border-radius: 50px;
+    padding: 5px 13px;
+    font-family: 'poppins', sans-serif;
+    font-size: 13px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z' fill='%23486581'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+}
+
+
+input[type=search]::-ms-clear { 
+    display: none; 
+    width : 0; 
+    height: 0; 
+}
+
+input[type=search]::-ms-reveal { 
+    display: none; 
+    width : 0; 
+    height: 0; 
+}
+
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { 
+    display: none; 
+}
+
+input::placeholder {
+    color: #486581;
+    font-size: 13px;
+    opacity: 0.5;
+    text-transform: uppercase;
 }
 
 #search-input:focus {
     outline: none;
 }
 
-.search-button {
+/* .search-button {
     font-family: 'raleway', sans-serif;
     color: #486581;
     width: 70px;
@@ -39,7 +75,7 @@ html {
     border: 1px solid #486581;
     border-radius: 3px;
     background-color: white;
-}
+} */
 
 .load-more {
     margin: 30px auto;
@@ -52,6 +88,7 @@ html {
 .load-more:hover {
     text-decoration: underline;
     text-underline-offset: 2px;
+    cursor: pointer;
 }
 
 .load-more:active {
