@@ -1,14 +1,13 @@
-
-
 import displayPosts from "./components/displayPosts.js";
 import handleScrollButton from "./helpers/handleSrollButton.js";
 import { baseUrl } from "./constants/api.js";
 
-
 let page = 1;
 let totalLoadedPosts = 0;
 
+
 handleScrollButton();
+
 
 async function getMorePosts() {
 	page += 1;
@@ -16,8 +15,8 @@ async function getMorePosts() {
 	await getPosts(newUrl);
 }
 
-const url = `${baseUrl}posts?_embed=true&orderby=date&order=desc&per_page=6&page=${page}`;
 
+const url = `${baseUrl}posts?_embed=true&orderby=date&order=desc&per_page=6&page=${page}`;
 const postList = document.querySelector(".post-list");
 const loading = document.querySelector(".loading");
 // const searchButton = document.querySelector(".search-button");
@@ -25,7 +24,6 @@ const loading = document.querySelector(".loading");
 
 async function getPosts(url) {
 	loading.classList.add("loading");
-
 	try {
 		const response = await fetch(url);
 		const results = await response.json();
@@ -40,7 +38,7 @@ async function getPosts(url) {
 
 		displayPosts(results, postList);
 	} catch (error) {
-		console.log(error);
+		// console.log(error);
 		postList.innerHTML = `<div class="error"><p>Ups! An error occurred!</p></div>`;
 	} finally {
 		loading.classList.remove("loading");
@@ -49,15 +47,12 @@ async function getPosts(url) {
 
 getPosts(url);
 
+
 document.querySelector(".load-more").addEventListener("click", getMorePosts);
 
 
 
-
-
-
-
-
+//Search
 function handleSearch() {
 	const searchInput = document.querySelector("#search-input").value;
 	console.log(searchInput);
@@ -69,7 +64,7 @@ function handleSearch() {
 	getPosts(filteredUrl);
   }
 
-//It's good practice to also allow users to search by pressing the 'Enter' key inside the search input. Consider adding an event listener for that:
+//Enter key 
 document.querySelector("#search-input").addEventListener("keydown", function(e) {
 	if (e.keyCode === 13) {  
 		e.preventDefault(); 

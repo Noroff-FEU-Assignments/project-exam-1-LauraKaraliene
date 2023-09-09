@@ -22,7 +22,6 @@ main {
     'text2 img2'
     'img3 text3'
     'text4 img4';
-    /* grid-template-columns: repeat(2, 1fr); */
     grid-gap: 0px;
     text-align: left;
     margin: 60px auto;
@@ -35,14 +34,13 @@ main {
     font-size: 13px;
   }
 
-  .about-page-img3 {
-
-  } 
-
   main img {
     width: 400px;
     height: 250px;
     object-fit: cover;
+    border: 1px solid var(--border-blog-image);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
   }
 
   .text {
@@ -67,7 +65,127 @@ main {
     padding-right: 20px;
  }
 
-  /* main div {
-    width: 300px;
-    height: 400px;
+ @media (max-width: 900px) {
+   main {
+      grid-template-areas: 
+      'img1 text1'
+      'img2 text2'
+      'img3 text3'
+      'img4 text4';
+      grid-gap: 20px;
+      text-align: left;
+      align-items: center;
+      margin: 40px auto;
+    } 
+
+    main p {
+      max-width: 350px;
+    }
+
+    h1 {
+      max-width: 200px;
+      margin: 5px 0px;
+    }
+  
+    main img {
+      width: 300px;
+      height: 230px;
+    }
+
+    .text {
+      padding-left: 10px;
+    }
+  }
+
+  @media (max-width: 750px) {
+    main {
+      grid-template-areas: 
+      'img1 '
+      'text1'
+      'img2 '
+      'text2'
+      'img3 '
+      'text3'
+      'img4 '
+      'text4';
+      grid-gap: 10px;
+    } 
+    main img {
+      width: 400px;
+      height: auto;
+    }
+
+    h1 {
+      max-width: 300px;
+      margin: 20px 0px;
+    }
+
+    main p {
+      max-width: 400px;
+    }
+
+    .text {
+      padding: 5px;
+      height: auto;
+    }
+
+    .about-page-text1 {
+      margin-bottom: 0;
+    }
+
+    .about-page-img1,
+    .about-page-img2,
+    .about-page-img3, 
+    .about-page-img4 {
+      margin-top: 20px;
+      padding: 5px;
+    }
+
+     .about-page-img1 {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 450px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+  .header-logo {
+    margin-bottom: 5px;
+  }
+
+    /* *, *::before, *::after {
+      box-sizing: border-box;
   } */
+
+    .about-page-img1,
+    .about-page-img2,
+    .about-page-img3,
+    .about-page-img4 {
+      padding: 0;
+    }
+
+    main img {
+      width: 100% !important;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      padding: 0;
+    }
+
+    main p, h1 {
+      padding: 0px 10px 0px 10px;
+
+  }
+  .text {
+    padding: 5px;
+    height: auto;
+    width: auto;
+  }
+
+  
+  }
+

@@ -17,6 +17,7 @@ export default function displayPosts(posts, parent) {
 																<h2 class="blog-title">${post.title.rendered}</h2>
 																<h2>${extractedData.h2}</h2>
 																<h3>${extractedData.h3}</h3>
+																
 															</a>
                             </div>`;
 		}

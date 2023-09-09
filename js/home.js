@@ -1,6 +1,6 @@
 
 
-import { updateButtonStates } from "./helpers/updateButtonStates.js";
+// import { updateButtonStates } from "./helpers/updateButtonStates.js";
 import { setActiveIndicator } from "./components/setActiveIndicator.js";
 import { displayCarousel } from "./components/displayCarousel.js";
 import { baseUrl } from "./constants/api.js";
@@ -39,7 +39,6 @@ function fetchAndUpdateCarousel() {
     const updatedUrl = `${baseUrl}posts?_embed=true&orderby=date&order=desc&per_page=3&page=${page}`;
     getCarousel(updatedUrl);
     setActiveIndicator(page);
-    updateButtonStates(); 
 }
 
 

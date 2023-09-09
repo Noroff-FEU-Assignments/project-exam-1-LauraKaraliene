@@ -1,14 +1,6 @@
 
 body {
     position: relative;
-   margin: 0;
-   display: flex;
-   flex-direction: column;
-   /* justify-content: space-between;  */
-   background-repeat: no-repeat; 
-   /* background-position: bottom; */
-   /* background-size: contain; */
-   overflow-x: hidden;
 }
 
 main {
@@ -18,6 +10,7 @@ main {
     align-items: center;
     max-width: 300px;
     margin: 10px auto 30px auto;
+    padding: 10px;
 }
 
 h1{
@@ -33,16 +26,9 @@ h1{
     margin: 15px 0px;
 }
 
-i {
+.form-upper-info i {
     font-size: 25px;
     margin: 15px 3px;
-}
-
-.contact-form {
-    /* max-width: 300px; */
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
 }
 
 :placeholder-shown {
@@ -52,7 +38,7 @@ i {
 }
 
 .input {
-    border: #486581 solid 1px;
+    border: var(--blue)solid 1px;
     border-radius: 5px;
     width: 300px;
     height: 30px;
@@ -61,7 +47,7 @@ i {
 }
 
 textarea {
-    border: #486581 solid 1px;
+    border: var(--blue) solid 1px;
     border-radius: 10px;
     width: 300px;
     height: 150px;
@@ -74,19 +60,24 @@ textarea {
     width: 150px;
     margin: 30px auto 10px auto; 
     padding: 3px 0px;
-    border: 1px solid #486581;
+    border: 1px solid var(--blue);
     border-radius: 5px;
-    color: #486581;
-    background-color: white;
+    color: var(--blue);
+    background-color: var(--white-background);
     cursor: pointer;
     box-sizing: border-box; 
     font-weight: bold;
 }
 
+.check {
+    color: var(--success-colour);
+    padding-right: 5px;
+}
+
 
 button.cta-send:active {
     font-weight: bold;
-    border: 2px solid #486581;
+    border: 2px solid var(--blue);
     box-sizing: border-box; 
     padding-top: 2px;  
     padding-bottom: 2px;
@@ -94,7 +85,7 @@ button.cta-send:active {
 
 .form-error {
     display: none;
-    color: red;
+    color: var(--error-colour);
     font-family: 'poppins', sans-serif;
     font-size: 0.8rem;
     text-align: left;
@@ -105,7 +96,7 @@ button.cta-send:active {
     font-family: 'poppins', sans-serif;
     padding: 10px;
     margin: 0px auto 0px auto;
-    color: green;
+    color: var(--success-colour);
     width: 300px;
     text-align: center;
   }
@@ -114,3 +105,7 @@ button.cta-send:active {
     margin: 0px 5px;
     font-weight: bold;
   }
+
+  /* .fa-brands, .fa-solid {
+    color: var(--brown);
+  } */

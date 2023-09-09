@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome Peaks | Contact</title>
-      <!-- <script
-      src="https://kit.fontawesome.com/00edcf15e0.js"
-      crossorigin="anonymous"
-    ></script> -->
     <script src="https://kit.fontawesome.com/1fb5a2b299.js" crossorigin="anonymous"></script>
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/contact.css" rel="stylesheet" />
@@ -15,14 +11,15 @@
 <body>
     <header>
         <section>
+            <label for="hamburger"><i class="fa-solid hamburger fa-bars" style="color: #ffffff;"></i></label>
             <nav class="header-upper">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html" class="current">Contact</a></li>
-                </ul>
-            </nav>     
+                </ul>        
+            </nav>   
         </section>
         <section class="header-lower">
             <div class="line"></div>
@@ -33,9 +30,6 @@
 
     </header>
     <main>
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F0F0F0" fill-opacity="1" d="M0,96L24,101.3C48,107,96,117,144,154.7C192,192,240,256,288,240C336,224,384,128,432,101.3C480,75,528,117,576,112C624,107,672,53,720,37.3C768,21,816,43,864,74.7C912,107,960,149,1008,176C1056,203,1104,213,1152,213.3C1200,213,1248,203,1296,218.7C1344,235,1392,277,1416,298.7L1440,320L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
-
         <section class="form-upper-info">
             <h1>GET IN TOUCH!</h1>
            <p>Feel free to contact me via email or social media, or simply fill out the form below.</p>
@@ -44,8 +38,6 @@
              <a href="https://m.me/LAURA_KARALIENE"><i class="fa-brands fa-facebook-messenger" style="color: #304151;"></i></a>
              <a href="https://www.facebook.com/LAURA_KARALIENE"><i class="fa-brands fa-facebook" style="color: #304151;"></i></a>
             <a href="https://www.instagram.com/LAURA_KARALIENE"><i class="fa-brands fa-instagram" style="color: #304151;"></i></a>
-            <!-- <a href="#"><i class="fa-brands fa-square-instagram" style="color: #304151;"></i></a> -->
-             <!-- <a href="#"><i class="fa-brands fa-discord" style="color: #304151;"></i></a> -->
             </div>
         </section>
         <section>
@@ -67,13 +59,13 @@
                     <textarea id="message" name="message" rows="7" cols="30"  placeholder="Leave your message here"></textarea>
                     <div class="form-error" id="messageError"> Message should be more than 25 characters long</div>
                </div>
-               
+                  <!-- <form action="submit.php" method="POST">
+                <input type="submit" value="SEND" class="cta_send" />
+            </form> -->
                 <button value="Send" class="cta-send">SEND</button>
                 <div id="informationMessage"></div>
             </form>
-            <!-- <form action="submit.php" method="POST">
-                <input type="submit" value="SEND" class="cta_send" />
-            </form> -->
+         
         </section>
     </main>
     <footer style="font-family: 'raleway', sans-serif;">
@@ -81,5 +73,6 @@
         <p>2023</p>
     </footer>
     <script src="js/contact.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
 </body>
 </html>

@@ -33,20 +33,13 @@ h1 {
 .carousel-image {
     width: 200px;
     height: 250px;
-    border: 1px solid grey;
-    border-radius: 5px;
     margin: 5px;
     overflow: hidden;
     object-fit: cover;
+    border: 1px solid var(--border-blog-image);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
 } 
-
-/* .carousel-images img {
-    width: 100%;
-    height: auto;
-    display: block;
-    /* transition: transform 0.3s; */
-    /* object-fit: cover; */
- /* }   */
 
 .carousel {
     width: 100%;
@@ -59,7 +52,6 @@ h1 {
     flex-direction: row;
     align-items: center;
     margin: 60px auto 20px auto;
-    /* transition: margin 0.3s ease; */
 }
 
 .loading {
@@ -69,7 +61,7 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.7); 
+    background-color: var(--loader-background); 
     z-index: 10;
 }
 
@@ -96,23 +88,23 @@ h1 {
 
 .carousel h1 {
     font-family: 'raleway', sans-serif;
-    color: #486581;
-    font-size: 1.1rem;
+    color: var(--blue);
+    font-size: 1.2rem;
     font-weight: bold;
     margin: 7px auto 0px auto;
 }
 
 .carousel h2 {
     font-family: 'raleway', sans-serif;
-    color: #486581;
-    font-size: 1rem;
+    color: var(--blue);
+    font-size: 0.9rem;
     font-weight: 600;
     margin: 5px auto;
 }
 
 .carousel h3 {
     font-family: 'raleway', sans-serif;
-    color: #486581;
+    color: var(--blue);
     font-size: 0.8rem;
     margin: 3px auto;
     font-weight: 600;
@@ -126,7 +118,7 @@ h1 {
     transform: translateY(-50%);   
     z-index: 10;
     border: 0;
-    color: #685240;
+    color: var(--brown);
     font-size: 1.9rem;
 }
 
@@ -150,7 +142,7 @@ h1 {
 } */
 
 .carousel-indicators {
-    color: #685240;
+    color: var(--brown);
     align-items: center;
     margin: 20px auto 30px auto;
 }
@@ -163,12 +155,12 @@ h1 {
     align-items: center;
     width: 15px;
     height: 15px;
-    border: 2px solid #685240;;
+    border: 2px solid var(--brown);;
     border-radius: 50%;
 }
 
 .carousel-indicators li.active {
-    background-color: #685240;
+    background-color: var(--brown);
 }
 
 .all-posts {
@@ -179,7 +171,7 @@ h1 {
 .all-posts a {
     text-decoration: none;
     font-family: 'poppins', sans-serif;
-    color: #486581;
+    color: var(--blue);
 }
 
 .all-posts:hover {
