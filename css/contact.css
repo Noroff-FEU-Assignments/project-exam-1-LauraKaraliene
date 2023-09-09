@@ -27,7 +27,7 @@ h1{
 }
 
 .form-upper-info i {
-    font-size: 25px;
+    font-size: 30px;
     margin: 15px 3px;
 }
 
@@ -71,7 +71,8 @@ textarea {
 
 .check {
     color: var(--success-colour);
-    padding-right: 5px;
+    margin: 0px 5px;
+    font-weight: bold;
 }
 
 
@@ -101,11 +102,22 @@ button.cta-send:active {
     text-align: center;
   }
   
-  .check {
-    margin: 0px 5px;
-    font-weight: bold;
-  }
 
-  /* .fa-brands, .fa-solid {
-    color: var(--brown);
-  } */
+  @media (max-width: 450px) {
+    .input {
+        height: 40px;
+    }
+    
+    textarea {
+        height: 200px;
+    }
+    
+    .cta-send {
+        height: 40px;
+        font-size: 17px;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+  }
