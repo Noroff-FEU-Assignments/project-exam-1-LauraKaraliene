@@ -1,0 +1,23 @@
+.load-more,
+.all-posts {
+    font-family: 'poppins', sans-serif;
+    border: 1px solid var(--blue);
+    border-radius: 50px;
+    padding: 5px 17px;
+    color: var(--blue);
+    text-decoration: none;
+ 
+}
+
+.load-more:hover,
+.all-posts:hover {
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+.load-more:active,
+.all-posts:active {
+    font-weight: 800;
+    box-shadow: 0 0 0 1px var(--blue);
+    box-sizing: border-box;
+}

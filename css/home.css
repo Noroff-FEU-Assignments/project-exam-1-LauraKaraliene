@@ -2,10 +2,11 @@
 .home-mountains {
     background-position: center;
     height: 300px;
-    min-width: 100%;
+    width: 100%;
     margin: 0px;
     background-size: cover;
     overflow: hidden;
+    position: relative;
 }
 
 h1 {
@@ -145,20 +146,66 @@ h1 {
 
 .all-posts {
     margin: 50px auto;
-    max-width: 100px;
+    width: 150px;
 }
 
 .all-posts a {
     text-decoration: none;
-    font-family: 'poppins', sans-serif;
     color: var(--blue);
-}
-
-.all-posts:hover {
-    text-decoration: underline;
-    text-underline-offset: 2px;
-}
-
-.all-posts:active {
-    font-weight: 500;
 } 
+
+
+@media screen and (max-width: 850px) {
+    .home-mountains {
+        background-position: center;
+       min-height: 200px;
+       max-height: 300px;
+        background-size: cover; 
+    }
+
+    .home-introduction {
+        max-width: 500px;
+    }
+
+    .carousel {
+        max-width: 630px;
+    }
+    
+    .carousel-image {
+        width: 150px;
+        height: 200px;
+    } 
+
+    .carousel-cards .carousel-card:nth-child(2) .carousel-image{
+        width: 200px;
+        height: 270px;
+    }
+
+    .carousel-card {
+        margin: 0 5px;
+    }
+
+    .carousel h1 {
+        font-size: 1rem;
+        max-width: 120px;
+    }
+    
+    .carousel h2 {
+        font-size: 0.9rem;
+    }
+    
+    .carousel h3 {
+        font-family: 'raleway', sans-serif;
+        color: var(--blue);
+        font-size: 0.8rem;
+        margin: 3px auto;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home-introduction {
+        max-width: fit-content;
+        padding: 0px 10px;
+    }
+}
