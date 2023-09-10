@@ -61,7 +61,7 @@ textarea {
     margin: 30px auto 10px auto; 
     padding: 3px 0px;
     border: 1px solid var(--blue);
-    border-radius: 5px;
+    border-radius: 50px;
     color: var(--blue);
     background-color: var(--white-background);
     cursor: pointer;
@@ -103,7 +103,7 @@ button.cta-send:active {
   }
   
 
-  @media (max-width: 450px) {
+  @media screen and (max-width: 450px) {
     .input {
         height: 40px;
     }

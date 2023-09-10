@@ -1,6 +1,3 @@
-
-
-// import { updateButtonStates } from "./helpers/updateButtonStates.js";
 import { setActiveIndicator } from "./components/setActiveIndicator.js";
 import { displayCarousel } from "./components/displayCarousel.js";
 import { baseUrl } from "./constants/api.js";

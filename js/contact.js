@@ -76,11 +76,6 @@ function validateForm() {
 // }
 
 
-function toggleMenu() {
-  const menu = document.querySelector(".header-upper");
-  menu.classList.toggle("active");
-}
-
 
 
 form.addEventListener("submit", validateForm);

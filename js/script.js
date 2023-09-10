@@ -8,3 +8,17 @@ function toggleMenu() {
     hamburgerIcon.classList.toggle("x");
 }
 });
+
+
+
+
+// window.addEventListener("scroll", function() {
+//     const header = document.querySelector(".header-upper");
+//     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+//     if (scrollPosition > 50) {  // Adjust 50 to the number of pixels you want
+//         header.classList.add("sticky-active");
+//     } else {
+//         header.classList.remove("sticky-active");
+//     }
+// });

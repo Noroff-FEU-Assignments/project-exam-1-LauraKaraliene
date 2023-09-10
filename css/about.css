@@ -65,7 +65,7 @@ main {
     padding-right: 20px;
  }
 
- @media (max-width: 900px) {
+ @media screen and (max-width: 900px) {
    main {
       grid-template-areas: 
       'img1 text1'
@@ -97,7 +97,7 @@ main {
     }
   }
 
-  @media (max-width: 750px) {
+  @media screen and (max-width: 750px) {
     main {
       grid-template-areas: 
       'img1 '
@@ -110,6 +110,7 @@ main {
       'text4';
       grid-gap: 10px;
     } 
+
     main img {
       width: 400px;
       height: auto;
@@ -118,7 +119,7 @@ main {
     h1 {
       max-width: 300px;
       margin: 20px 0px;
-    }
+    } 
 
     main p {
       max-width: 400px;
@@ -146,20 +147,20 @@ main {
     }
   }
 
-  @media (max-width: 450px) {
+  @media screen and (max-width: 450px) {
   html, body {
     margin: 0;
     padding: 0;
     width: 100%;
 }
 
+  body {
+    background-image: none;
+  }
+
   .header-logo {
     margin-bottom: 5px;
   }
-
-    /* *, *::before, *::after {
-      box-sizing: border-box;
-  } */
 
     .about-page-img1,
     .about-page-img2,
@@ -185,7 +186,5 @@ main {
     height: auto;
     width: auto;
   }
-
-  
   }
 
