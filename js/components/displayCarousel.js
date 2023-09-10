@@ -1,10 +1,12 @@
 import extractContent from "../helpers/extractContent.js";
 import getFeaturedImage from "../helpers/getFeaturedImage.js";
 
+
 export function displayCarousel(posts, parent) {
     const carouselCards = parent.querySelector(".carousel-cards");
     carouselCards.innerHTML = "";
 	for (const post of posts) {
+		
 		const contentHtml = post.content.rendered;
 		const extractedData = extractContent(contentHtml);
 		const featuredImage = getFeaturedImage(post);
