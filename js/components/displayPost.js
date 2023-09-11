@@ -1,7 +1,8 @@
 
 export default function displayPost(post, parent) {
 	const title = post.title.rendered;
-	document.title = "Awesome Peaks | " + title;
+	// document.title = "Awesome Peaks | " + title;
+  document.title = `Awesome Peaks | " + ${title}`;
 
 	parent.innerHTML = `<div>
                           <h1>${title}</h1>
