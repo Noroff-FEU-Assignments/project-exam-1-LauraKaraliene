@@ -1,6 +1,7 @@
 
 .home-mountains {
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
     height: 300px;
     width: 100%;
     margin: 0px;
@@ -67,6 +68,7 @@ h1 {
     align-items: center;
     flex-wrap: nowrap;
     margin: 0 auto;
+    transition: transform 0.3s ease;
 }
 
 .carousel-card {
@@ -156,10 +158,10 @@ h1 {
 
 
 @media screen and (max-width: 850px) {
+
     .home-mountains {
-        background-position: center;
-       min-height: 200px;
-       max-height: 300px;
+        background-position: top center;
+        height: auto;
         background-size: cover; 
     }
 
@@ -195,15 +197,88 @@ h1 {
     }
     
     .carousel h3 {
-        font-family: 'raleway', sans-serif;
-        color: var(--blue);
         font-size: 0.8rem;
-        margin: 3px auto;
-        font-weight: 600;
     }
 }
 
 @media screen and (max-width: 600px) {
+    .home-introduction {
+        max-width: 400px;
+        padding: 0px 5px;
+    }
+
+    h1 {
+       align-self: flex-start;
+       margin: 30px 0px;
+    }
+
+    .carousel-card:nth-child(1), .carousel-card:nth-child(3){
+      display: none;
+    }
+
+    .carousel-image {
+        width: 400px !important;
+        height: 470px !important;
+        position: relative;
+    }
+
+    .carousel {
+        max-width: 400px;
+    }
+
+    .control.prev, .control.next {
+        top: 40%;
+        color: white;
+        font-size: 2.4rem;
+    }
+
+    .control.prev {
+        left: 10px;
+    }
+
+    .control.next {
+        right: 10px;
+    }
+
+    .carousel h1 {
+        font-size: 1.3rem;
+        max-width: 250px;
+        margin: 10px auto;
+    }
+    
+    .carousel h2 {
+        font-size: 1.1rem;
+    }
+    
+    .carousel h3 {
+        font-size: 1rem;
+        margin: 7px auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+    body {
+        background-image: none;
+    }
+
+    .carousel-image {
+       width: 100% !important;
+       height: auto;
+       object-fit: cover;
+       display: block;
+       margin: 0 ;
+       padding: 0;
+    }
+
+    .carousel-card {
+        padding: 0;
+    }
+
+    .carousel {
+        max-width: fit-content;
+    }
+
     .home-introduction {
         max-width: fit-content;
         padding: 0px 10px;

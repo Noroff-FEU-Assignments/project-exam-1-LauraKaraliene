@@ -70,17 +70,6 @@ input::placeholder {
     font-family: 'poppins', sans-serif;
 }
 
-/* .load-more:hover {
-    text-decoration-line: none;
-    cursor: pointer;
-}
-
-.load-more:active {
-    font-weight: 800;
-    box-shadow: 0 0 0 1px var(--blue);
-    box-sizing: border-box;
-} */
-
 .blog-image {
    object-fit: cover;
     width: 300px;
