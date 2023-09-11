@@ -23,12 +23,4 @@ export function displayCarousel(posts, parent) {
                                         </div>`;
 		}
 	}
-
-	// if (window.innerWidth <= 600) {
-    //     const cards = carouselCards.querySelectorAll('.carousel-card');
-    //     if (cards.length >= 3) {
-    //         cards[0].style.display = 'none';
-    //         cards[2].style.display = 'none';
-    //     }
-    // }
 }

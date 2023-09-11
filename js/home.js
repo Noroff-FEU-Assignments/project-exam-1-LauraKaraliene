@@ -2,7 +2,6 @@ import { setActiveIndicator } from "./components/setActiveIndicator.js";
 import { displayCarousel } from "./components/displayCarousel.js";
 import { baseUrl } from "./constants/api.js";
 
-
 let page = 1;
 let totalLoadedPosts = 0;
 const maxPages = 3;
@@ -22,7 +21,6 @@ nextBtn.addEventListener('click', function() {
     }
 });
 
-
 prevBtn.addEventListener('click', function() {
     if (page > 1) { 
         page--;
@@ -40,7 +38,6 @@ function fetchAndUpdateCarousel() {
 }
 
 
-
 async function getCarousel(url) {
 	loading.classList.add("loading");
 
@@ -50,21 +47,21 @@ async function getCarousel(url) {
 		console.log(results);
 		totalLoadedPosts += results.length;
 		displayCarousel(results, carousel);
-
+        
 	} catch (error) {
 		carousel.innerHTML = `<div class="error"><p>Ups! An error occurred!</p></div>`;
-
 	} finally {
 		loading.classList.remove("loading");
 	}
 }
 
-
 fetchAndUpdateCarousel();
 
 
-let startX;
 
+
+//swipe cards-mobile screen
+let startX;
 const carouselCards = document.querySelector('.carousel-cards');
 
 carouselCards.addEventListener('touchstart', (e) => {
@@ -75,12 +72,12 @@ carouselCards.addEventListener('touchend', (e) => {
     const endX = e.changedTouches[0].clientX;
     const diffX = startX - endX;
 
-    if (diffX > 50) { // A rightward swipe, meaning we go to the next item
+    if (diffX > 50) { 
         if (page < maxPages) {  
             page++;
             fetchAndUpdateCarousel();
         }
-    } else if (diffX < -50) { // A leftward swipe, meaning we go to the previous item
+    } else if (diffX < -50) { 
         if (page > 1) { 
             page--;
             fetchAndUpdateCarousel();

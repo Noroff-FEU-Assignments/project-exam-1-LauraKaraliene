@@ -13,7 +13,7 @@
 h1 {
     font-weight: 200;
     font-family: 'raleway', sans-serif;
-    margin: 30px;
+    margin: 30px auto;
 }
 
 .home-introduction {
@@ -130,6 +130,8 @@ h1 {
     margin: 20px auto 30px auto;
 }
 
+
+
 .carousel-indicators li {
     position: relative;
     right: 25px;
@@ -142,8 +144,14 @@ h1 {
     border-radius: 50%;
 }
 
+
+
 .carousel-indicators li.active {
     background-color: var(--brown);
+}
+
+.carousel-indicators.invisible {
+    display: none;
 }
 
 .all-posts {
@@ -204,13 +212,13 @@ h1 {
 @media screen and (max-width: 600px) {
     .home-introduction {
         max-width: 400px;
-        padding: 0px 5px;
+        padding: 0px;
     }
 
     h1 {
-       align-self: flex-start;
-       margin: 30px 0px;
-    }
+       text-align: center;
+       
+    } 
 
     .carousel-card:nth-child(1), .carousel-card:nth-child(3){
       display: none;
@@ -260,6 +268,7 @@ h1 {
     
     body {
         background-image: none;
+        padding: 0;
     }
 
     .carousel-image {
@@ -267,8 +276,7 @@ h1 {
        height: auto;
        object-fit: cover;
        display: block;
-       margin: 0 ;
-       padding: 0;
+       margin: 0px 0px 20px 0px;
     }
 
     .carousel-card {

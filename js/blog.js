@@ -6,6 +6,7 @@ let page = 1;
 let totalLoadedPosts = 0;
 
 
+//scroll button ease in
 handleScrollButton();
 
 
@@ -38,7 +39,6 @@ async function getPosts(url) {
 
 		displayPosts(results, postList);
 	} catch (error) {
-		// console.log(error);
 		postList.innerHTML = `<div class="error"><p>Ups! An error occurred!</p></div>`;
 	} finally {
 		loading.classList.remove("loading");
@@ -46,7 +46,6 @@ async function getPosts(url) {
 }
 
 getPosts(url);
-
 
 document.querySelector(".load-more").addEventListener("click", getMorePosts);
 
@@ -75,7 +74,7 @@ document.querySelector("#search-input").addEventListener("keydown", function(e) 
 
 
 
-
+//try to make search display posts:
 
 
 //   document.querySelector("#search-input").addEventListener('click', function(event) {
@@ -103,7 +102,6 @@ document.querySelector("#search-input").addEventListener("keydown", function(e) 
 //         handleSearch(); // Call your search function
 //     }
 // });
-
 
 
 // searchButton.onclick = function() {

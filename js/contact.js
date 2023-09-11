@@ -11,8 +11,6 @@ const messageSubmit = document.querySelector("#informationMessage");
 
 
 
-
-
 function validateForm() {
   event.preventDefault();
 
@@ -48,37 +46,12 @@ function validateForm() {
     messageSubmit.innerHTML =
       '<div class="information-message"><i class="fa-solid fa-check check"></i>Your message has been sent!</div>';
   }
-//   if (customersName.value.length >= 5 && validateEmail(email.value) && subject.value.length >= 15 && message.value.length >= 25) {
-//     sendDataToServer();
-// }
 }
 
-// function sendDataToServer() {
-//   const formData = new FormData(form);
-
-//   fetch('submit.php', {
-//     method: 'POST',
-//     body: formData
-//   })
-//   .then(response => response.json())
-//   .then(data => {
-//     if (data.success) {
-//       form.reset();
-//       messageSubmit.innerHTML = '<div class="information-message"><i class="fa-solid fa-check check"></i>Your message has been sent!</div>';
-//     } else {
-//       messageSubmit.innerHTML = '<div class="information-message">Error sending message. Try again later.</div>';
-//     }
-//   })
-//   .catch(error => {
-//     console.error('Error:', error);
-//     messageSubmit.innerHTML = '<div class="information-message">Error sending message. Try again later.</div>';
-//   });
-// }
-
-
-
-
 form.addEventListener("submit", validateForm);
+
+
+
 
 function checkLength(value, len) {
   if (value.trim().length > len) {
