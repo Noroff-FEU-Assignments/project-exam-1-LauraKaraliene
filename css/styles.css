@@ -193,6 +193,10 @@ div.loading {
     border: 0;
 }
 
+.visually-hidden {
+    display: none;
+}
+
   @media screen and (max-width: 800px) {
     .header-logo img {
         max-width: 120px;
