@@ -25,8 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		try {
 			const response = await fetch(url);
 			const post = await response.json();
-			// const title = document.querySelector("title");
-			// title.innerHTML = `Awesome Peaks | ${post.title.rendered}`;
+		
 			displayPost(post, postPage);
 		} catch (error) {
 			postPage.innerHTML = `<div class="error"><p>Ups! An error occurred!</p></div>`;
