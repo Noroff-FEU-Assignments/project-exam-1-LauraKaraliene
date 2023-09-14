@@ -17,16 +17,13 @@ body {
 }
 
 .header-upper {
-    display: none;
     background-color: var(--blue);
     box-shadow: var(--box-shadow);
-    width: 100%;
-    top: 0;
 }
 
-.header-upper.active {
+/* .header-upper.active {
     display: block;
-}
+} */
 
 .hamburger {
     position: relative;
@@ -34,9 +31,16 @@ body {
     padding: 0;
 }
 
-.hamburger.fa-bars.x::before {
+.menu-toggle-checkbox {
+    display: none;
+}
+
+.menu-toggle-checkbox:checked + .hamburger i::before {
     content: "\f00d"; 
-    transition: transform 0.3s ease;
+}
+
+.menu-toggle-checkbox:checked ~ .header-upper {
+    display: block; 
 }
 
 nav ul {
@@ -182,6 +186,7 @@ div.loading {
   }
 
   .visually-hidden {
+    display: none;
     position: absolute;
     width: 1px;
     height: 1px;
@@ -193,9 +198,6 @@ div.loading {
     border: 0;
 }
 
-.visually-hidden {
-    display: none;
-}
 
   @media screen and (max-width: 800px) {
     .header-logo img {
@@ -231,7 +233,6 @@ div.loading {
         z-index: 1000;
         width: 100%;
         max-height: 0;
-        /* top: 50px; */
         top: 40px;
         overflow: hidden;
         transition: max-height 0.8s ease-in-out;
@@ -243,7 +244,7 @@ div.loading {
 
     .header-upper.active {
         max-height: 500px; 
-       
+       display: block;
     }
 
     nav li {
