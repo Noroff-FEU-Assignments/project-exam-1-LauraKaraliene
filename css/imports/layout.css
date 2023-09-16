@@ -12,10 +12,13 @@ header {
 }
 
 .header-upper {
+    display: none;
    align-items: center;
    margin: 0px;
    padding: 0px;
    text-align: center;
+   width: 100%;
+   top: 0;
 }
 
 .header-lower {

@@ -16,6 +16,10 @@ body {
     background-position-y: bottom;
 }
 
+main {
+    line-height: 1.5;
+}
+
 .header-upper {
     background-color: var(--blue);
     box-shadow: var(--box-shadow);
