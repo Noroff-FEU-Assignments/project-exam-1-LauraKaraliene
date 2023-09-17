@@ -20,7 +20,7 @@ async function getMorePosts() {
 const url = `${baseUrl}posts?_embed=true&orderby=date&order=desc&per_page=6&page=${page}`;
 const postList = document.querySelector(".post-list");
 const loading = document.querySelector(".loading");
-// const searchButton = document.querySelector(".search-button");
+
 
 
 async function getPosts(url) {
@@ -57,10 +57,10 @@ function handleSearch() {
 	console.log(searchInput);
 	page = 1;
     totalLoadedPosts = 0;
-	const filteredUrl = baseUrl + `posts?search=${searchInput}`;
+	const searchUrl = `${baseUrl}posts?_embed=true&orderby=date&order=desc&search=${searchInput}`;
 	
 	postList.innerHTML = "";
-	getPosts(filteredUrl);
+	getPosts(searchUrl);
   }
 
 //Enter key 

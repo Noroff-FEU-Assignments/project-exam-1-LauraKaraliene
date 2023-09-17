@@ -130,8 +130,6 @@ h1 {
     margin: 20px auto 30px auto;
 }
 
-
-
 .carousel-indicators li {
     position: relative;
     right: 25px;
@@ -144,14 +142,8 @@ h1 {
     border-radius: 50%;
 }
 
-
-
 .carousel-indicators li.active {
     background-color: var(--brown);
-}
-
-.carousel-indicators.invisible {
-    display: none;
 }
 
 .all-posts {
